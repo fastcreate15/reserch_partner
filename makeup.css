@@ -1,0 +1,203 @@
+ /* Animasi bergerak naik turun */
+ @keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Gambar bergerak naik */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Menambahkan animasi ke gambar */
+.animate-img {
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+
+
+/* Posisi ikonnya di pojok bawah kanan */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px; /* Jarak dari bawah */
+    right: 20px;  /* Jarak dari kanan */
+    background-color: #25D366; /* Warna hijau WhatsApp */
+    border-radius: 30%;
+    padding: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Hover effect untuk ikon */
+.whatsapp-icon:hover {
+    background-color: #128C7E; /* Warna hijau gelap saat hover */
+    cursor: pointer;
+}
+
+ /* Spinner CSS */
+ .spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.spinner div {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db; /* Warna biru untuk spinner */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 5s linear infinite;
+}
+
+/* Animasi putar spinner */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Sembunyikan spinner saat halaman selesai dimuat */
+.hidden {
+    display: none;
+}
+
+
+/* Default theme: Light theme */
+body.light-theme {
+background-color: #fff;
+color: #000;
+}
+
+/* Dark theme */
+body.dark-theme {
+background-color: #121212;
+color: #fff;
+}
+
+/* Navbar styling */
+#navbar.light-theme {
+background-color: #020202; /* Light navbar */
+
+}
+
+#navbar.dark-theme {
+background-color: #333; /* Dark navbar */
+}
+
+/* Navbar links */
+#navbar .nav-link {
+color: #000; /* Default text color for light theme */
+}
+
+/* Change text color to white when in dark theme */
+body.dark-theme #navbar .nav-link {
+color: #fff; /* White text color for dark theme */
+}
+
+/* Active link in navbar */
+#navbar .nav-link.active {
+font-weight: bold;
+}
+
+/* Theme switcher text */
+#theme-switcher {
+cursor: pointer;
+color: #000; /* Default color */
+}
+
+/* In dark theme, switcher text becomes white */
+body.dark-theme #theme-switcher {
+color: #fff;
+}
+
+/* Optional: navbar text color adjustments */
+#navbar .navbar-text {
+color: #000; /* Default color */
+}
+
+
+/* In dark theme, make navbar text white */
+body.dark-theme #navbar .navbar-text {
+color: #fff;
+}
+
+/* Optional: Change icon color based on theme */
+#theme-switcher svg {
+fill: currentColor;
+}
+
+
+/* Animasi slide-up */
+@keyframes slideUp {
+0% {
+transform: translateY(20px);
+opacity: 0;
+}
+100% {
+transform: translateY(0);
+opacity: 1;
+}
+}
+
+.animate-slide-up {
+animation: slideUp 5s ease-out forwards;
+}
+
+/* Menambahkan animasi saat konten dimuat */
+.lc-block {
+opacity: 0; /* Awalnya tersembunyi */
+animation: slideUp 5s ease-out forwards;
+}
+
+
+/* Kelas untuk animasi slide-up */
+.animatecont-slide-up {
+animation: slideUp 1s ease-out forwards;
+opacity: 10;  /* Awalnya tersembunyi */
+}
+
+
+#navbar {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-scrolled {
+    background-color: rgb(255, 250, 250); 
+}
+
+.navbar-dark-scrolled {
+    background-color: rgb(15, 14, 14); /* Latar belakang saat tema gelap */
+}
+
+
+body.dark-theme .navbar-scrolled {
+    background-color: rgb(15, 14, 14); /* Latar belakang saat tema gelap */
+}
+
+
+.t{
+    font-family: cursive;
+}
+
+.d{
+    font-family: cursive;
+    text-align: justify;
+}
+

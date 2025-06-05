@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <!--  <link rel="stylesheet" id="picostrap-styles-css" href="https://cdn.livecanvas.com/media/css/library/bundle.css" media="all"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
+   <link rel="stylesheet" href="makeup.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+
+</head>
+
+<body class="">
+    
+
+    <nav class="navbar navbar-expand-lg" id="navbar" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;">
+        <div class="container">
+            <a class="navbar-brand" href="https://library.livecanvas.com/sections/">
+                <img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top img-fluid" alt="">
+                <span editable="inline">Assistify</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar1" aria-controls="myNavbar1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar1">
+                <div lc-helper="shortcode" class="live-shortcode me-auto">
+                    <ul id="menu-menu-1" class="navbar-nav">
+                        <li class="menu-item nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="menu-item nav-item"><a href="index.html" class="nav-link">Tentang Kami</a></li>
+                        <li class="menu-item nav-item"><a href="index.html" class="nav-link">Layanan</a></li>
+                        <li class="menu-item nav-item"><a href="portofolio.html" class="nav-link">Portofolio</a></li>
+                        <li class="menu-item nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Spesial
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="tools.html">Carai jurnal cepat</a></li>
+                                <li><a class="dropdown-item" href="#">Rumus Metode</a></li>
+                                <li><a class="dropdown-item" href="program.html">Program</a></li>
+                                <li><a class="dropdown-item" href="software.html">Aplikasi</a></li>
+                            </ul>
+                        </li>                   
+                     </ul>
+                </div>
+                <div class="lc-block">
+                    <a class="navbar-text" href="#" id="theme-switcher">
+                        <!-- Bulan/Matahari Icon -->
+                       
+                        <button class="icon-button rounded-2">
+                            <img id="moon-icon" src="moon.png" alt="Moon Icon" width="30" height="30">
+                            <img id="sun-icon" src="sun.png" alt="Sun Icon" width="30" height="30" style="display: none;">
+                        </button>
+                        
+
+                        <span id="theme-text"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    
+
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/082213361623?text=Halo%20admin,%20saya%20ingin%20konsultasi%20terkait%20kebutuhan%20saya" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+        
+    </div>
+
+    <!-- Spinner -->
+<div id="spinner" class="spinner">
+    <div></div>
+</div>
+
+<!-- Hero -->
+<div class="container text-center py-4 py-md-6" >
+    <div class="lc-block card border-0 text-center rounded p-4 p-lg-6" style="background:url(dds.webp)  center / cover no-repeat;">
+        <div class="row card-body mb-3 mb-lg-4">
+            <div class="col-xl-11 col-xxl-9 mx-auto">
+                <div class="lc-block mb-4">
+                    <div editable="rich" id="theme-switcher">
+                        <p class="">JOIN OUR COMMUNITY</p>
+                    </div>
+                </div>
+                <div class="lc-block" id="theme-switcher">
+                    <h3 editable="inline" class="fw-bold display-6">We are <span class="lc-block position-relative">trusted <img class="position-absolute top-100 start-0 mt-n1 img-fluid" src="https://cdn.livecanvas.com/media/underline/underline3.svg"></span> by over 5000+ clients. Join them now and grow your business.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="container py-5">
+            <div class="lc-block" id="theme-switcher">
+                <a class="btn btn-info btn-lg" href="https://wa.me/1234567890" role="button">
+                    <!-- WhatsApp Icon and Get Started Text -->
+                    <i class="fab fa-whatsapp me-2"></i> Konsultasi
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Layanan -->
+<div class="container" id="Layanan">
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col" data-aos="fade-right" data-aos-duration="1500" >
+                <div class="lc-block card card-cover h-100 overflow-hidden bg-dark rounded-5 shadow-lg" lc-helper="background" style="background-image: url('Software.webp'); background-size: cover;">
+                    <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); filter: blur(5px);"></div>
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 text-light" >
+                        <div class="lc-block pt-5 mt-5 mb-4">
+                            <div editable="rich">
+                                <h2 class="display-6 lh-1 fw-bold t">Pengembangan Software</h2>
+                                <p class="d">Membangun aplikasi web dan mobile sesuai kebutuhan bisnis Anda</p>
+                            </div>
+                        </div>
+                        <ul class="lc-block d-flex list-unstyled mt-auto ms-auto">
+                            <a class="btn btn-link btn-sm text-white d" href="https://wa.me/082213361623?text=Halo%20Assistify,%20saya%20tertarik%20dengan%20layanan%20Pengembangan%20Software%20dan%20mau%20diskusi." role="button">Konsultasi sekarang</a>
+                        </ul>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col" data-aos="fade-up" data-aos-duration="1600">
+                <div class="lc-block card card-cover h-100 overflow-hidden bg-dark rounded-5 shadow-lg" lc-helper="background" style="background-image: url('Hadware.webp'); background-size: cover;">
+                    <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); filter: blur(5px);"></div>
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 text-light" >
+                        <div class="lc-block pt-5 mt-5 mb-4">
+                            <div editable="rich">
+                                <h2 class="display-6 lh-1 fw-bold t">Pengembangan Hardware</h2>
+                                <p class="d">Merancang dan mengembangkan perangkat keras yang mendukung solusi teknologi Anda.</p>
+                            </div>
+                        </div>
+                        <ul class="lc-block d-flex list-unstyled mt-auto ms-auto">
+                            <a class="btn btn-link btn-sm text-white d" href="https://wa.me/082213361623?text=Halo%20Assistify,%20saya%20tertarik%20dengan%20layanan%20Pengembangan%20Hardware%20dan%20mau%20diskusi." role="button">Konsultasi sekarang</a>
+                        </ul>
+                       </div>
+                  </div>
+            </div>
+
+            <div class="col" data-aos="fade-left" data-aos-duration="1700">
+                <div class="lc-block card card-cover h-100 overflow-hidden bg-dark rounded-5 shadow-lg" lc-helper="background" style="background-image: url('Riset.webp'); background-size: cover;">
+                    <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); filter: blur(5px);"></div>
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 text-light" >
+                        <div class="lc-block pt-5 mt-5 mb-4">
+                            <div editable="rich">
+                                <h2 class="display-6 lh-1 fw-bold t">Partner Riset</h2>
+                                <p class="d">Menjadi mitra dalam penelitian untuk memberikan wawasan dan solusi berbasis data yang akurat.</p>
+                            </div>
+                        </div>
+                        <ul class="lc-block d-flex list-unstyled mt-auto ms-auto">
+                            <a class="btn btn-link btn-sm text-white d" href="https://wa.me/082213361623?text=Halo%20Assistify,%20saya%20tertarik%20dengan%20layanan%20Partner%20Riset%20dan%20mau%20diskusi." role="button">Konsultasi sekarang</a>
+                        </ul>
+                     </div>
+                  </div>
+                </div>
+        </div>
+</div>
+ 
+
+
+<!-- Tentang -->
+    <div class="container" id="Tentang" style="padding-top: 10vh;padding-bottom:10vh">
+        <div class="row align-items-center px-2" id="theme-switcher">
+            <div class="col-12 col-md-7 col-lg-6" data-aos="fade-right" data-aos-duration="1500">
+                <div class="lc-block mb-4" >
+                    <div editable="rich">
+                        <h1 class="t">Tentang Assistify</h1>
+<p class="d">Di Assistify, kami memahami bahwa masalah teknologi bisa mengganggu produktivitas dan kenyamanan. Oleh karena itu, kami menawarkan layanan dukungan teknis yang menyediakan bantuan ahli melalui berbagai saluran, termasuk chat, panggilan telepon, dan remote support. Dengan pengalaman yang mendalam di dunia teknologi, tim kami siap memberikan solusi praktis yang sesuai dengan kebutuhan pengguna.
+
+</p>
+                    </div>
+                </div><!-- /lc-block -->
+                <div class="lc-block d-flex mb-5 d">
+                    <div class="pe-3">
+                        <h3 class="h2 mb-0 text-secondary" editable="inline">100%</h3>
+                        <span editable="inline" class="mb-0"> Satisfaction </span>
+                    </div>
+                    <div class="border-start"></div>
+                    <div class="px-3">
+                        <h3 class="h2 mb-0 text-secondary" editable="inline">24/7</h3>
+                        <span editable="inline" class="mb-0"> Support </span>
+                    </div>
+                    <div class="border-start"></div>
+                    <div class="ps-3">
+                        <h3 class="h2 mb-0 text-secondary" editable="inline">+40k</h3>
+                        <span editable="inline" class="mb-0"> Project </span>
+                    </div>
+                </div>
+            </div><!-- /col -->
+            <div class="col-12 col-md-5 col-lg-6" data-aos="fade-left" data-aos-duration="1500">
+                <div class="lc-block">
+                    <img alt="" class="img-fluid mx-auto d-block animate-img" 
+                         src="https://cdn.livecanvas.com/media/svg/undraw-sample/undraw_connected_world_wuay.svg" 
+                         loading="lazy">
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+        </div>
+    </div>
+    
+   
+    <div class="row text-center pb-5 pt-3 mt-5" data-aos="fade-up" data-aos-duration="1500">
+        <div class="col-md-12 text-center" id="theme-switcher">
+            <div class="lc-block"><span editable="inline" class="small mt-4 d-block"></span>
+                <h2 editable="inline" class="display-2 mb-0 t"><b>Dibalik Layar</b></h2>
+                <p editable="inline d"> Mereka yang berkontribusi dalam bisnis kami.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d" data-aos="fade-up" data-aos-duration="1500">
+        <div class="row pb-4 mt-3">
+            <!-- Team Start -->
+            <div class="col-md-6 col-lg-3 my-2">
+                <div class="lc-block">
+                    <img src="https://images.unsplash.com/photo-1552001524-c417c1e72080?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1322&amp;q=80" title="" alt="" loading="lazy" class="img-fluid">
+                </div>
+                <div class="lc-block position-relative text-center mx-2 mt-n4 py-4 bg-secondary shadow rounded-2" style="">
+                    <h4 editable="inline" >Benjamin Lawrence</h4>
+                    <p editable="inline" class="small">Mobile Developer</p>
+                    <div class="nav justify-content-center">
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" lc-helper="svg-icon" fill="currentColor" class="me-1">
+                                <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                            </svg> </a>
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" lc-helper="svg-icon" fill="currentColor" class="me-1">
+                                <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                            </svg> </a>
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" lc-helper="svg-icon" fill="currentColor">
+                                <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                            </svg> </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team end -->
+            <!-- Team Start -->
+            <div class="col-md-6 col-lg-3 my-2">
+                <div class="lc-block">
+                    <img src="https://images.unsplash.com/photo-1551981326-8deeb7e63b5d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1338&amp;q=80" title="" alt="" loading="lazy" class="img-fluid">
+                </div>
+                <div class="lc-block position-relative text-center mx-2 mt-n4 py-4 bg-secondary shadow" style="">
+                    <h4 editable="inline">Robert Greene</h4>
+                    <p editable="inline" class="small">UX Designer</p>
+                    <div class="nav justify-content-center">
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" lc-helper="svg-icon" fill="currentColor" class="me-1">
+                                <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                            </svg> </a>
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" lc-helper="svg-icon" fill="currentColor" class="me-1">
+                                <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                            </svg> </a>
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" lc-helper="svg-icon" fill="currentColor">
+                                <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                            </svg> </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team end -->
+            <!-- Team Start -->
+            <div class="col-md-6 col-lg-3 my-2">
+                <div class="lc-block">
+                    <img src="https://images.unsplash.com/photo-1552001527-c229a3b41327?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" title="" alt="" loading="lazy" class="img-fluid">
+                </div>
+                <div class="lc-block position-relative text-center mx-2 mt-n4 py-4 bg-secondary shadow" style="">
+                    <h4 editable="inline">Paul Mackenzie</h4>
+                    <p editable="inline" class="small">Full Stack Developer</p>
+                    <div class="nav justify-content-center">
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" lc-helper="svg-icon" fill="currentColor" class="me-1">
+                                <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                            </svg> </a>
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" lc-helper="svg-icon" fill="currentColor" class="me-1">
+                                <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                            </svg> </a>
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" lc-helper="svg-icon" fill="currentColor">
+                                <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                            </svg> </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team end -->
+            <!-- Team Start -->
+            <div class="col-md-6 col-lg-3 my-2">
+                <div class="lc-block">
+                    <img src="https://images.unsplash.com/photo-1542412466-747de1979985?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1348&amp;q=80" title="" alt="" loading="lazy" class="img-fluid">
+                </div>
+                <div class="lc-block position-relative text-center mx-2 mt-n4 py-4 bg-secondary shadow" style="">
+                    <h4 editable="inline">Faith Watson</h4>
+                    <p editable="inline" class="small">Illustrator Designer</p>
+                    <div class="nav justify-content-center">
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" lc-helper="svg-icon" fill="currentColor" class="me-1">
+                                <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                            </svg> </a>
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" lc-helper="svg-icon" fill="currentColor" class="me-1">
+                                <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                            </svg> </a>
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" lc-helper="svg-icon" fill="currentColor">
+                                <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                            </svg> </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team end -->
+        </div>
+    </div>
+    
+<!-- Testimoni -->
+    <div class="container py-5  mt-6" data-aos="fade-up">
+        <div class="row mb-4">
+            <div class="col-md-12 text-center" >
+                <div class="lc-block mb-4" id="theme-switcher" >
+                    <h2 editable="inline" class="rfs-25 fw-bolder t">Testimoni</h2>
+                    <p editable="inline" class=""> Apa Yang Mereka Katakan Tentang Layanan Kami</p>
+                </div><!-- /lc-block -->
+            </div>
+        </div>
+        <div class="row justify-content-center d" >
+            <div class="col-md-8 col-lg-4 mb-4 ">
+                <div class="card border-0 shadow">
+                    <div class="card-body py-4">
+                        <div class="d-flex">
+                            <img style="width:48px;height:48px" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8YXZhdGFyfGVufDB8Mnx8fDE2Mzg4OTExNTE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" alt="Photo by Nicolas Horn" class="rounded-2 shadow" srcset="https://images.unsplash.com/photo-1527980965255-d3b416303d12?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8YXZhdGFyfGVufDB8Mnx8fDE2Mzg4OTExNTE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1527980965255-d3b416303d12??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8YXZhdGFyfGVufDB8Mnx8fDE2Mzg4OTExNTE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1527980965255-d3b416303d12??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8YXZhdGFyfGVufDB8Mnx8fDE2Mzg4OTExNTE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1527980965255-d3b416303d12??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8YXZhdGFyfGVufDB8Mnx8fDE2Mzg4OTExNTE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1527980965255-d3b416303d12??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8YXZhdGFyfGVufDB8Mnx8fDE2Mzg4OTExNTE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080">
+                            <div class="ps-2">
+                                <h4 editable="inline" class="rfs-7 ms-2">Mathew Glock</h4>
+                            </div>
+                        </div>
+                        <div class="lc-block mt-4 text-muted">
+                            <div editable="rich">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rating mt-3 text-success">
+                            <div class="lc-block"> <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg> <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4 mb-4">
+                <div class="card border-0 shadow">
+                    <div class="card-body py-4">
+                        <div class="d-flex">
+                            <img style="width:48px;height:48px" src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8YXZhdGFyfGVufDB8Mnx8fDE2Mzg4OTExNTE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" alt="Photo by Leio McLaren" class="rounded-2 shadow" srcset="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8YXZhdGFyfGVufDB8Mnx8fDE2Mzg4OTExNTE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1628157588553-5eeea00af15c??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8YXZhdGFyfGVufDB8Mnx8fDE2Mzg4OTExNTE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1628157588553-5eeea00af15c??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8YXZhdGFyfGVufDB8Mnx8fDE2Mzg4OTExNTE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1628157588553-5eeea00af15c??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8YXZhdGFyfGVufDB8Mnx8fDE2Mzg4OTExNTE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1628157588553-5eeea00af15c??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8YXZhdGFyfGVufDB8Mnx8fDE2Mzg4OTExNTE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080">
+                            <div class="ps-2">
+                                <h4 editable="inline" class="rfs-7 ms-2">Tahmid William&nbsp;<p></p>
+                                    <p></p>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="lc-block mt-4 text-muted">
+                            <div editable="rich">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rating mt-3 text-success">
+                            <div class="lc-block"> <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg> <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4 mb-4 ">
+                <div class="card border-0 shadow">
+                    <div class="card-body py-4">
+                        <div class="d-flex">
+                            <img style="width:48px;height:48px" src="https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTh8fGZhY2V8ZW58MHwyfHx8MTYzODg5MTA3MA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" alt="Photo by Amir Seilsepour" class="rounded-2 shadow" srcset="https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTh8fGZhY2V8ZW58MHwyfHx8MTYzODg5MTA3MA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTh8fGZhY2V8ZW58MHwyfHx8MTYzODg5MTA3MA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTh8fGZhY2V8ZW58MHwyfHx8MTYzODg5MTA3MA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTh8fGZhY2V8ZW58MHwyfHx8MTYzODg5MTA3MA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTh8fGZhY2V8ZW58MHwyfHx8MTYzODg5MTA3MA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080">
+                            <div class="ps-2">
+                                <h4 editable="inline" class="rfs-7 ms-2">Jarvis Ridley&nbsp;<p></p>
+                                    <p></p>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="lc-block mt-4 text-muted">
+                            <div editable="rich">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="rating mt-3 text-success">
+                            <div class="lc-block"> <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg> <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-4 mb-4">
+                <div class="card border-0 shadow">
+                    <div class="card-body py-4">
+                        <div class="d-flex">
+                            <img style="width:48px;height:48px" src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" alt="Photo by Imansyah Muhamad Putera" class="rounded-2 shadow" srcset="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1542909168-82c3e7fdca5c??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1542909168-82c3e7fdca5c??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1542909168-82c3e7fdca5c??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1542909168-82c3e7fdca5c??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080">
+                            <div class="ps-2">
+                                <h4 editable="inline" class="rfs-7 ms-2">Bronwen Baxter&nbsp;<p></p>
+                                    <p></p>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="lc-block mt-4 text-muted">
+                            <div editable="rich">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rating mt-3 text-success">
+                            <div class="lc-block"> <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg> <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4 mb-4 animate-img" >
+                <div class="card border-0 shadow">
+                    <div class="card-body py-4">
+                        <div class="d-flex">
+                            <img style="width:48px;height:48px" src="https://images.unsplash.com/photo-1579503841516-e0bd7fca5faa?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NXx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" alt="Photo by Conor OBrien" class="rounded-2 shadow" srcset="https://images.unsplash.com/photo-1579503841516-e0bd7fca5faa?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NXx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1579503841516-e0bd7fca5faa??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NXx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1579503841516-e0bd7fca5faa??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NXx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1579503841516-e0bd7fca5faa??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NXx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1579503841516-e0bd7fca5faa??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NXx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080">
+                            <div class="ps-2">
+                                <h4 editable="inline" class="rfs-7 ms-2">
+                                    Nadir Chandler
+
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="lc-block mt-4 text-muted">
+                            <div editable="rich">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rating mt-3 text-success">
+                            <div class="lc-block"> <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg> <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4 mb-4">
+                <div class="card border-0 shadow">
+                    <div class="card-body py-4">
+                        <div class="d-flex">
+                            <img style="width:48px;height:48px" src="https://images.unsplash.com/photo-1584308972272-9e4e7685e80f?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" alt="Photo by Daniil Lobachev" class="rounded-2 shadow" srcset="https://images.unsplash.com/photo-1584308972272-9e4e7685e80f?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1584308972272-9e4e7685e80f??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1584308972272-9e4e7685e80f??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1584308972272-9e4e7685e80f??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1584308972272-9e4e7685e80f??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8ZmFjZXxlbnwwfDJ8fHwxNjM4ODkxMDU2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080">
+                            <div class="ps-2">
+                                <h4 editable="inline" class="rfs-7 ms-2">
+                                    Samira Goldsmith
+
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="lc-block mt-4 text-muted">
+                            <div editable="rich">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="rating mt-3 text-success">
+                            <div class="lc-block"> <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg> <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="container-fluid g-0 d">
+        <div class="row g-0 align-items-center">
+            <div class="col-lg-6 d-flex justify-content-center" >
+                <div class="col-12 col-lg-9 p-4" id="theme-switcher" data-aos="fade-right">
+                    <div class="lc-block">
+                        <div editable="rich">
+                            <h2 class="fw-bolder">Jam Kerja</h2>
+                        </div>
+                    </div>
+                    <div class="lc-block">
+                        <div editable="rich">
+                            <p>Monday to Friday: 07:00 – 19:45
+                                Saturday to Sunday: 11:00 – 17:00</p>
+                        </div>
+                    </div>
+
+                    <div class="lc-block">
+                        <div editable="rich">
+                            <h2 class="fw-bolder">Alamat</h2>
+                        </div>
+                    </div>
+                    <div class="lc-block">
+                        <div editable="rich">
+                            <p>Street 3043 Clarence Court -&nbsp;Fayetteville&nbsp;NC <br>North Carolina 28306</p>
+                        </div>
+                    </div>
+
+                    <div class="lc-block">
+                        <div editable="rich">
+                            <h2 class="fw-bolder">Nomor Telpon</h2>
+                        </div>
+                    </div>
+
+                    <div class="lc-block">
+                        <div editable="rich">
+                            <p>Number 910-249-5283<br>Mobile Number 910-492-4232</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-5" >
+                <div class="lc-block" data-aos="fade-left">
+                    <div class="ratio ratio-16x9" lc-helper="gmap-embed">
+                        <iframe class="rounded-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3367402.484498921!2d124.32694091558038!3d0.08917933676252894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d9eae8eae2432b3%3A0x1030bfbcaf71ac0!2sNorth%20Maluku!5e1!3m2!1sen!2sid!4v1739171959753!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                </div><!-- /lc-block -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Data Cards</h2>
+        <div class="row" id="cards-container"></div>
+    </div>
+
+    <script>
+        // URL Google Sheets CSV
+        const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSihZSa7BqdztJRBVxe5VOcJSqdPA3eNLVnI_bMA8QEXB435dxFZIaCCrEUWRggfsRrL8jbzXsnd6zz/pub?output=csv";
+
+        // Mengambil data CSV dan memprosesnya
+        fetch(csvUrl)
+            .then(response => response.text())
+            .then(csvData => {
+                // Menggunakan PapaParse untuk mengonversi CSV ke JSON
+                Papa.parse(csvData, {
+                    header: true, // Menyertakan header dalam CSV untuk akses kolom
+                    dynamicTyping: true,
+                    complete: function(results) {
+                        const entries = results.data;
+                        const container = document.getElementById("cards-container");
+
+                        // Menampilkan setiap entri dalam bentuk card
+                        entries.forEach(entry => {
+                            // Menyesuaikan dengan nama kolom dari CSV
+                            const title = entry.Title;   // Ganti dengan nama kolom yang sesuai
+                            const description = entry.Description;  // Ganti dengan nama kolom yang sesuai
+
+                            // Membuat card untuk setiap entri
+                            const card = `
+                                <div class="col-md-4 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${title}</h5>
+                                            <p class="card-text">${description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+
+                            // Menambahkan card ke dalam container
+                            container.innerHTML += card;
+                        });
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching CSV data: ', error);
+            });
+    </script>
+
+
+    <div class="container d" id="theme-switcher">
+        <div class="row">
+            <!-- Kontak Support -->
+            <div class="col-md-4 align-self-center border-bottom">
+                <div class="lc-block">
+                    <div editable="rich">
+                        <h2 class="text-primary">Support@assistify.co.id</h2>
+                        <p class="" id="theme-switcher">Hubungi kami kapan saja untuk mendapatkan dukungan teknis yang cepat dan efisien.</p>
+                    </div>
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+    
+            <!-- Deskripsi Layanan -->
+            <div class="col-md-5 align-self-center">
+                <div class="lc-block">
+                    <div editable="rich">
+                        <p>Assistify menyediakan layanan dukungan teknis untuk memecahkan masalah teknologi yang dapat mengganggu produktivitas Anda. Tim ahli kami siap membantu melalui berbagai saluran, termasuk chat, telepon, dan remote support, dengan solusi yang sesuai dengan kebutuhan Anda.</p>
+                    </div>
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+    
+            <!-- Langganan -->
+            <div class="col-md-3 align-self-center">
+                <div class="lc-block text-center">
+                    <span editable="inline" class="d-block h2 display-2 text-success">1</span>
+                    <span editable="inline" class="d-block mb-3 text-secondary" style="letter-spacing: 5px;">Layanan Terbaik</span>
+                </div>
+                <div class="lc-block text-center mb-5">
+                    <a class="btn btn-sm btn-outline-primary" href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text=LiveCanvas+event+demo&amp;details=This+is+my+description&amp;location=New+York&amp;dates=20300108T120000Z%2F20300108T150000Z" role="button">Subscribe</a>
+                    <!-- Customize the link for your event: https://decomaan.github.io/google-calendar-link-generator/ -->
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+        </div><!-- /row -->
+    </div><!-- /container -->
+    
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script>
+    // Menyembunyikan spinner setelah halaman selesai dimuat
+    window.addEventListener('load', function() {
+        const spinner = document.getElementById('spinner');
+        spinner.classList.add('hidden');
+    });
+</script>
+
+<!-- Optional: Add JavaScript -->
+<script>
+    // Cek tema yang disimpan di localStorage
+ window.onload = function() {
+     if (localStorage.getItem('theme') === 'dark') {
+         // Jika tema yang disimpan adalah dark, terapkan dark mode
+         document.body.classList.add('dark-theme');
+         document.getElementById('moon-icon').style.display = 'none';
+         document.getElementById('sun-icon').style.display = 'block';
+         document.getElementById('theme-text').textContent = '';
+     } else {
+         // Jika tidak, pastikan light mode diterapkan
+         document.body.classList.remove('dark-theme');
+         document.getElementById('moon-icon').style.display = 'block';
+         document.getElementById('sun-icon').style.display = 'none';
+         document.getElementById('theme-text').textContent = '';
+     }
+ };
+ 
+ // Event listener untuk tombol tema
+ document.getElementById('theme-switcher').addEventListener('click', function() {
+     if (document.body.classList.contains('dark-theme')) {
+         // Jika sudah dark mode, ganti ke light mode
+         document.body.classList.remove('dark-theme');
+         localStorage.setItem('theme', 'light');
+         document.getElementById('moon-icon').style.display = 'block';
+         document.getElementById('sun-icon').style.display = 'none';
+         document.getElementById('theme-text').textContent = '';
+     } else {
+         // Jika light mode, ganti ke dark mode
+         document.body.classList.add('dark-theme');
+         localStorage.setItem('theme', 'dark');
+         document.getElementById('moon-icon').style.display = 'none';
+         document.getElementById('sun-icon').style.display = 'block';
+         document.getElementById('theme-text').textContent = '';
+     }
+ });
+ 
+ </script>
+
+<script>
+    // Membuat observer untuk memantau elemen yang masuk viewport
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Menambahkan kelas animasi jika elemen muncul
+            entry.target.classList.add('animatecont-slide-up');
+            observer.unobserve(entry.target);  // Hentikan observasi setelah animasi diterapkan
+        }
+    });
+}, { threshold: 0 });  // Mengatur threshold menjadi 50%, artinya elemen muncul setengahnya di viewport
+
+// Pilih elemen yang ingin dianimasikan
+const elements = document.querySelectorAll('.animatecont-slide-up');
+elements.forEach(element => {
+    observer.observe(element);  // Mulai observasi pada elemen
+});
+
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+
+<script>
+    window.addEventListener("scroll", function() {
+        const navbar = document.getElementById("navbar");
+        const isDarkTheme = document.body.classList.contains("dark-theme");
+
+        if (window.scrollY > 50) {
+            navbar.classList.add(isDarkTheme ? "navbar-dark-scrolled" : "navbar-scrolled");
+        } else {
+            navbar.classList.remove(isDarkTheme ? "navbar-dark-scrolled" : "navbar-scrolled");
+        }
+    });
+
+    // // Tema switcher function
+    // const themeSwitcher = document.getElementById('theme-switcher');
+    // themeSwitcher.addEventListener('click', function() {
+    //     document.body.classList.toggle('dark-theme');
+        
+    //     // Update text based on theme
+    //     const themeText = document.getElementById('theme-text');
+    //     if (document.body.classList.contains('dark-theme')) {
+    //         themeText.textContent = 'Switch to Light';
+    //     } else {
+    //         themeText.textContent = 'Switch to Dark';
+    //     }
+    // });
+</script>
+
+
+</body>
+
+</html>
